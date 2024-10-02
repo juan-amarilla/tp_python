@@ -45,4 +45,4 @@ while opcion != 4:
             print("Se salio exitosamente el programa gracias por usarlo. ");
         
         case _:
-            print("No");
+            print("Error. ");
