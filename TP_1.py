@@ -10,6 +10,10 @@ inventario = [
 ]
 
 opcion = 0;
+
+print("Quiosco Yoda's Snack");
+print("---------------------");
+
 mensaje = """
 1-Agregar producto al inventario
 2-Realizar una venta
@@ -24,12 +28,18 @@ while opcion != 4:
 
         case 1:
             estado = kios.agregar(inventario);
+            mensaje_estado = kios.mensaje_estado(estado);
+            print(mensaje_estado);
         
         case 2:
-            print(2);
+            estado = kios.venta(inventario);
+            mensaje_estado = kios.mensaje_estado(estado);
+            print(mensaje_estado);
         
         case 3:
             estado = kios.mostrar_inventario(inventario);
+            mensaje_estado = kios.mensaje_estado(estado);
+            print(mensaje_estado);
         
         case 4:
             print("Se salio exitosamente el programa gracias por usarlo. ");

@@ -47,3 +47,42 @@ def validar_precio(precio: int) -> int:
         precio = ingre.ingresar_y_validar_entero("Ingrese un precio mayor e igual a 200 para el producto nuevo: ");
 
     return precio;
+
+def validar_producto_vender(producto: int, largo_lista: int) -> int:
+    """
+    Valida el producto a la venta
+
+    Args:
+    producto(int)
+    largo_lista(int)
+
+    return:
+    Retorna el producto a la venta
+    """
+    
+    while producto > largo_lista or producto < 1:
+        producto = ingre.ingresar_y_validar_entero("Debe ingresar un número: ");
+
+    return producto
+
+
+def validar_cantidad_producto(cantidad: int, cantidad_disponible: int) -> int:
+    """
+    Valida el stock
+
+    Args:
+    cantidad(int)
+    cantidad_disponible(int)
+
+    return:
+    Retorna el producto a la venta
+    """
+
+    while cantidad > cantidad_disponible or cantidad < 0:
+
+       print("¡Cantidad no disponible!");
+       print(f"Stock disponible: {cantidad_disponible}");
+    
+       cantidad = ingre.ingresar_y_validar_entero("Ingrese una cantidad valida: ");
+    
+    return cantidad;
